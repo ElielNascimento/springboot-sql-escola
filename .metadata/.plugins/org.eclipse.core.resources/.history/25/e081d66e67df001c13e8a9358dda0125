@@ -1,0 +1,1 @@
+	INSERT INTO tbl_pessoa (nome, idade, cpf,sexo) VALUES ('ELIEL',29,'084507','MASCULINO');

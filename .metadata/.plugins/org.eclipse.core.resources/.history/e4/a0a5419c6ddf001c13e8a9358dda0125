@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS tbl_pessoa;
+
+CREATE TABLE TBL_PESSOA(
+);

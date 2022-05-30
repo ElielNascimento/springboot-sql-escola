@@ -1,0 +1,27 @@
+package br.com.crud.backend.service;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.crud.backend.dto.PessoaDTO;
+import br.com.crud.backend.entities.Pessoa;
+import br.com.crud.backend.repository.PessoaRepository;
+
+@Service
+public class PessoaService implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Autowired
+	public PessoaRepository pessoaRepository;
+
+	public List<PessoaDTO> findAll() {
+		List<Pessoa> list = pessoaRepository.findAll();
+		return list.stream().map(x -> 
+		new PessoaDTO(x)).collect(Collectors.toList());
+	}
+
+}

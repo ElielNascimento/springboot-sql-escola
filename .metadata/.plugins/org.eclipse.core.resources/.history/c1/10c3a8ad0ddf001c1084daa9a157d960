@@ -1,0 +1,33 @@
+package br.com.crud.backend.dto;
+
+import br.com.crud.backend.entities.Pessoa;
+
+public class PessoaDTO {
+
+	private Long id;
+	private String nome;
+	private int idade;
+	private String cpf;
+	private Boolean sexo;
+
+	public PessoaDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public PessoaDTO(Long id, String nome, int idade, String cpf, Boolean sexo) {
+		this.id = id;
+		this.nome = nome;
+		this.idade = idade;
+		this.cpf = cpf;
+		this.sexo = sexo;
+	}
+
+	public PessoaDTO(Pessoa entity) {
+		id = entity.getId();
+		nome = entity.getNome();
+		idade = entity.getIdade();
+		cpf = entity.getCpf();
+		sexo = entity.getSexo();
+	}
+
+}
